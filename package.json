@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "test": "node test/app.test.js",
-    "start": "node src/app.js"
+    "start": "node src/app.js",
+    "build": "echo \"paso omitir para produccion en node.js\""
   }
 }
