@@ -1,4 +1,4 @@
-const { saludar, estadoSistema, sumar, healthCheck } = require('../src/app');
+import { saludar, estadoSistema, sumar, healthCheck } from "../src/app.js";
 
 function testSaludar() {
   const resultado = saludar("Angel");
