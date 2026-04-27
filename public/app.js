@@ -1,10 +1,10 @@
 const VERSION = '1.2.0';
 
-function saludar(nombre){
-    return `hola ${nombre}, bienvenido a CodeAngel`;
+function saludar(nombre) {
+    return `Hola ${nombre}, bienvenido a CodeAngel`;
 }
 
-function healcheck(){
+function healcheck() {
     return {
         status: 'ok',
         version: VERSION,
@@ -13,12 +13,12 @@ function healcheck(){
     };
 }
 
-function verificarSistema(){
+function verificarSistema() {
     const resultado = healcheck();
     const statusDiv = document.getElementById('status');
 
     statusDiv.textContent = `${resultado.mensaje} | ${resultado.timestamp}`;
-    statusDiv.style.color = 'rgba(17, 168, 11, 0.73)';
+    statusDiv.style.color = 'rgba(17, 168, 11, 0.9)';
 }
 
 document.addEventListener('DOMContentLoaded', () => {

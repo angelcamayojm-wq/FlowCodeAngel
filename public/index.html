@@ -1,27 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>CodeAngel</title>
+    <title>FlowCodeAngel</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <h1>Bienvenido a CodeAngel</h1>
-    <span>cargando</span>
-
-    <header></header>
+    <header>
+        <h1>FlowCodeAngel</h1>
+        <span class="badge" id="version">v...</span>
+    </header>
 
     <main>
-        <div class="car">
-            <h2>Programando con git</h2>
-            <div class="status" id="status">
-                verificando el despliegue de la pagina
-            </div>
-        </div>
+        <p>Proyecto básico en Node.js para practicar flujo de trabajo con Git y GitHub.</p>
 
-        <button onclick="verificarsistema()">
-            verificar sistema
-        </button>
+        <section class="card">
+            <h2>Funciones</h2>
+            <ul>
+                <li>saludar</li>
+                <li>despedir</li>
+                <li>estadoSistema</li>
+                <li>sumar</li>
+                <li>restar</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Estado del sistema</h2>
+            <div class="status" id="status">Verificando sistema...</div>
+
+            <button onclick="verificarSistema()">
+                Verificar sistema
+            </button>
+        </section>
+
+        <section class="card">
+            <h2>Pruebas</h2>
+            <p>Ejecuta:</p>
+            <code>npm test</code>
+        </section>
     </main>
 
     <script src="app.js"></script>
