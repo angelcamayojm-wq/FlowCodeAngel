@@ -16,11 +16,12 @@ function healcheck(){
 function verificarSistema(){
     const resultado = healcheck();
     const statusDiv = document.getElementById('status');
-    statusDiv.textContent = '${resultado.menssage} | ${resultado.timestamp}';
-    statusDiv.style.color ='rgba(17, 168, 11, 0.73)';
+
+    statusDiv.textContent = `${resultado.mensaje} | ${resultado.timestamp}`;
+    statusDiv.style.color = 'rgba(17, 168, 11, 0.73)';
 }
 
-document.addEventListener('DOMContentLoaded'.at, () =>{
-    document.getElementById('version').textContent = 'v${VERSION}'
-    verificarSistema(); "verificar"
-})
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('version').textContent = `v${VERSION}`;
+    verificarSistema();
+});
