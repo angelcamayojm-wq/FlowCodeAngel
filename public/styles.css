@@ -19,17 +19,12 @@ header {
   margin-bottom: 20px;
 }
 
-header h1 {
-  margin: 0 0 10px 0;
-}
-
 .badge {
   display: inline-block;
   background: #00984c;
   color: white;
   padding: 4px 12px;
   border-radius: 20px;
-  font-size: 14px;
 }
 
 .card {
@@ -53,17 +48,8 @@ button {
   padding: 12px 24px;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 16px;
 }
 
 button:hover {
   background: #007a3d;
-}
-
-code {
-  display: inline-block;
-  background: #111827;
-  color: #00ff88;
-  padding: 8px 12px;
-  border-radius: 6px;
 }

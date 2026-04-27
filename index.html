@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FlowCodeAngel</title>
+
+    
+    <link rel="stylesheet" href="./public/styles.css">
+</head>
+<body>
+
+    
+
+    <header>
+        <h1>FlowCodeAngel</h1>
+        <span class="badge" id="version">v...</span>
+    </header>
+
+    <main>
+        <p>Proyecto básico en Node.js para practicar flujo de trabajo con Git y GitHub.</p>
+
+        <section class="card">
+            <h2>Funciones</h2>
+            <ul>
+                <li>saludar</li>
+                <li>despedir</li>
+                <li>estadoSistema</li>
+                <li>sumar</li>
+                <li>restar</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>Estado del sistema</h2>
+            <div class="status" id="status">Verificando sistema...</div>
+
+            <button onclick="verificarSistema()">
+                Verificar sistema
+            </button>
+        </section>
+
+        <section class="card">
+            <h2>Pruebas</h2>
+            <p>Ejecuta:</p>
+            <code>npm test</code>
+        </section>
+    </main>
+
+    
+    <script src="./public/app.js"></script>
+
+</body>
+</html>

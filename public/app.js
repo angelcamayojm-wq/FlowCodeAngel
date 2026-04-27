@@ -1,15 +1,11 @@
 const VERSION = '1.2.0';
 
-function saludar(nombre) {
-    return `Hola ${nombre}, bienvenido a CodeAngel`;
-}
-
 function healcheck() {
     return {
         status: 'ok',
         version: VERSION,
         timestamp: new Date().toISOString(),
-        mensaje: 'Sistemas CodeAngel funcionando correctamente'
+        mensaje: 'Sistema funcionando correctamente 🚀'
     };
 }
 
@@ -18,10 +14,9 @@ function verificarSistema() {
     const statusDiv = document.getElementById('status');
 
     statusDiv.textContent = `${resultado.mensaje} | ${resultado.timestamp}`;
-    statusDiv.style.color = 'rgba(17, 168, 11, 0.9)';
+    statusDiv.style.color = 'green';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('version').textContent = `v${VERSION}`;
-    verificarSistema();
 });
