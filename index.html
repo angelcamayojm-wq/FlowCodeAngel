@@ -1,53 +1,155 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>FlowCodeAngel</title>
-
-    
-    <link rel="stylesheet" href="./public/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FlowCodeAngel: demo colorida para practicar Node.js, Git, GitHub y pruebas.">
+  <title>FlowCodeAngel | Demo Git + Node</title>
+  <link rel="stylesheet" href="./public/styles.css">
+  <script src="./public/app.js" defer></script>
 </head>
 <body>
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+  <div class="bg-orb orb-three"></div>
 
-    
+  <header class="hero">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="logo" href="#inicio" aria-label="Ir al inicio">
+        <span class="logo-mark">⚡</span>
+        FlowCodeAngel
+      </a>
+      <span class="badge" id="version">v...</span>
+    </nav>
 
-    <header>
-        <h1>FlowCodeAngel</h1>
-        <span class="badge" id="version">v...</span>
-    </header>
+    <section id="inicio" class="hero-grid">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Node.js + GitHub + magia visual</p>
+        <h1>Practica Git con flow, colores y pruebas automáticas.</h1>
+        <p class="hero-text">
+          Un proyecto pequeño pero bien presentado: funciones reutilizables, demo web,
+          pruebas en Node.js y un diseño que ya no parece salido de una calculadora del 2004.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#demo">Probar demo</a>
+          <a class="button ghost" href="#funciones">Ver funciones</a>
+        </div>
+      </div>
 
-    <main>
-        <p>Proyecto básico en Node.js para practicar flujo de trabajo con Git y GitHub.</p>
+      <div class="terminal-card reveal" aria-label="Terminal de ejemplo">
+        <div class="terminal-top">
+          <span></span><span></span><span></span>
+        </div>
+        <pre><code>$ npm test
+✅ saludar devuelve un saludo personalizado
+✅ estadoSistema devuelve OK
+✅ operaciones matemáticas funcionan
 
-        <section class="card">
-            <h2>Funciones</h2>
-            <ul>
-                <li>saludar</li>
-                <li>despedir</li>
-                <li>estadoSistema</li>
-                <li>sumar</li>
-                <li>restar</li>
-            </ul>
-        </section>
+🎉 pruebas pasaron correctamente</code></pre>
+      </div>
+    </section>
+  </header>
 
-        <section class="card">
-            <h2>Estado del sistema</h2>
-            <div class="status" id="status">Verificando sistema...</div>
+  <main>
+    <section class="stats reveal" aria-label="Resumen del proyecto">
+      <article>
+        <strong>8+</strong>
+        <span>Funciones JS</span>
+      </article>
+      <article>
+        <strong>0</strong>
+        <span>Dependencias</span>
+      </article>
+      <article>
+        <strong>CI</strong>
+        <span>GitHub Actions</span>
+      </article>
+    </section>
 
-            <button onclick="verificarSistema()">
-                Verificar sistema
-            </button>
-        </section>
+    <section id="funciones" class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Funciones principales</p>
+        <h2>Pequeñas piezas, mejor arquitectura.</h2>
+      </div>
 
-        <section class="card">
-            <h2>Pruebas</h2>
-            <p>Ejecuta:</p>
-            <code>npm test</code>
-        </section>
-    </main>
+      <div class="cards">
+        <article class="card">
+          <span class="card-icon">👋</span>
+          <h3>saludar / despedir</h3>
+          <p>Genera mensajes personalizados validando nombres vacíos.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon">🧮</span>
+          <h3>operaciones</h3>
+          <p>Suma, resta, multiplica y divide con validación de números.</p>
+        </article>
+        <article class="card">
+          <span class="card-icon">💚</span>
+          <h3>healthCheck</h3>
+          <p>Entrega estado, versión, servicio y fecha de verificación.</p>
+        </article>
+      </div>
+    </section>
 
-    
-    <script src="./public/app.js"></script>
+    <section id="demo" class="section demo-grid reveal">
+      <div class="panel glass">
+        <p class="eyebrow">Demo interactiva</p>
+        <h2>Haz que el proyecto responda.</h2>
 
+        <label for="nombre">Nombre</label>
+        <input id="nombre" type="text" value="Angel" autocomplete="name">
+
+        <div class="actions-row" aria-label="Acciones de saludo">
+          <button class="button primary" id="btnSaludar" type="button">Saludar</button>
+          <button class="button ghost" id="btnDespedir" type="button">Despedir</button>
+          <button class="button neon" id="btnSistema" type="button">Estado</button>
+        </div>
+
+        <output class="output" id="mensaje">Presiona un botón y mira el flow.</output>
+      </div>
+
+      <div class="panel calculator">
+        <p class="eyebrow">Mini calculadora</p>
+        <h2>Operaciones rápidas.</h2>
+
+        <div class="number-grid">
+          <label>
+            Número A
+            <input id="numeroA" type="number" value="12">
+          </label>
+          <label>
+            Número B
+            <input id="numeroB" type="number" value="4">
+          </label>
+        </div>
+
+        <button class="button primary full" id="btnCalcular" type="button">Calcular</button>
+
+        <div class="result-grid" id="resultados" aria-live="polite">
+          <span>➕ Suma: --</span>
+          <span>➖ Resta: --</span>
+          <span>✖️ Multiplicación: --</span>
+          <span>➗ División: --</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">Comandos útiles</p>
+        <h2>Para trabajar como pro.</h2>
+      </div>
+      <div class="command-list">
+        <code>npm start</code>
+        <code>npm test</code>
+        <code>npm run check</code>
+        <code>git checkout -b feature/mejora-ui</code>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Hecho por <strong>Angel Rivera</strong> · FlowCodeAngel 🚀</p>
+  </footer>
 </body>
 </html>
